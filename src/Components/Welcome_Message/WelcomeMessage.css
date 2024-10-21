@@ -1,0 +1,22 @@
+.welcome-message {
+    font-size: 1.5rem;
+}
+
+.welcome-message b {
+    font-weight: 500;
+    color: #8ab4f8;
+}
+
+.welcome-message h1 {
+    font-weight: 400;
+    color: #b1b1b1;
+}
+
+.welcome-message img {
+    margin: 20px;
+    max-width: 1300px;
+    mix-blend-mode: screen;
+    border: 2px solid;
+    border-radius: 100px;
+    border-color: #ffffff67;
+}
