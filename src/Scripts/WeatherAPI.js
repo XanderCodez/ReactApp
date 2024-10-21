@@ -25,6 +25,7 @@ export const API = {
     URL(city) {
         return `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${this.KEY}`
     },
+
     LOCATION(lat, lon) {
         return `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${this.KEY}`
     }
@@ -33,11 +34,12 @@ export const API = {
 export const fetchWeatherData = async (url, showErrors) => {
 
     try {
-        const RESPONSE = await fetch(url)
 
-        if (!RESPONSE.ok) showErrors("Response not ok!", "City not found")
+        const RESPONSE = await fetch(url);
 
-        return await RESPONSE.json()
+        if (!RESPONSE.ok) showErrors("Response not ok!", "City not found");
+
+        return await RESPONSE.json();
     }
 
     catch (error) { showErrors(error, "Invalid city name!") }

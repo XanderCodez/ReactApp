@@ -3,6 +3,8 @@ import './SearchBar.css'
 
 const SearchBar = ({ city, setCity, handleLocation, handleSearch }) => {
 
+
+
     return (
 
         <div className='search-bar'>

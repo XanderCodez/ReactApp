@@ -9,3 +9,14 @@ body {
     background-color: #202124;
     text-align: center;
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+
+    }
+
+    to {
+        opacity: 1;
+    }
+}

@@ -2,18 +2,16 @@
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    justify-content: center;
     max-width: fit-content;
     margin: 20px auto;
-    padding: 12px;
     border-radius: 20px;
     background-color: #00000059;
-    gap: 1rem;
+    padding: 10px;
+    gap: 20px;
 }
 
 .recent-search a {
     text-transform: uppercase;
-    display: flex;
     font-size: 1.7rem;
     color: #8ab4f8c0;
     text-decoration: none;
@@ -25,13 +23,13 @@
     cursor: pointer;
 }
 
-.recent-search .material-symbols-outlined {
+.material-symbols-outlined {
     font-size: 2rem;
     cursor: pointer;
     color: #ff0000a8;
     transition: all 0.2s ease;
 }
 
-.recent-search .material-symbols-outlined:hover {
+.material-symbols-outlined:hover {
     color: #ff0000;
 }

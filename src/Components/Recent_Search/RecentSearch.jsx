@@ -1,38 +1,22 @@
 import React from "react"
 import './RecentSearch.css'
 
-const RecentSearch = ({ recentSearches, handleRecentSearch, clearRecent, style }) => {
+const RecentSearch = ({ recentSearches, handleRecentSearch, clearRecent, isVisible }) => {
 
-    const [isVisible, setIsVisible] = useState(true);
-
-    const handleClear = () => {
-        clearRecent();  // Clear localStorage or data
-        setIsVisible(false);  // Hide the component after clear
-    };
-
-    if (!isVisible) {
-        return null;  // If isVisible is false, don't render anything
-    }
-
+    if (!isVisible || recentSearches.length === 0) return null;
 
     return (
-
-        <div className="recent-search" style={style}>
+        <div className="recent-search">
 
             <span className="material-symbols-outlined"
                 type="button"
-                onClick={handleClear}>
+                onClick={clearRecent}>
                 cancel
             </span>
 
-            {
-                recentSearches.map((city, index) => (
-                    <a key={index} onClick={() => handleRecentSearch(city)}>{city}</a>
-                ))
-            }
+            {recentSearches.map((city) => (<a onClick={() => handleRecentSearch(city)}>{city}</a>))}
 
-        </div >
-
+        </div>
     )
 }
 
